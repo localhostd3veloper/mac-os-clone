@@ -1,0 +1,84 @@
+export const appList = [
+  {
+    title: "Finder",
+    url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png",
+    isOpen: true,
+  },
+  {
+    isOpen: false,
+    title: "Photos",
+    url: "https://help.apple.com/assets/61A90991F506A44EEC099A8B/61A90997F506A44EEC099A93/en_US/b27be11281d58d9597fabdfcc67a3060.png",
+  },
+  {
+    isOpen: false,
+    title: "Email",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mail_%28iOS%29.svg/1200px-Mail_%28iOS%29.svg.png",
+  },
+  {
+    isOpen: false,
+    title: "Safari",
+    url: "https://km.support.apple.com/resources/sites/APPLE/content/live/IMAGES/0/IM26/en_US/safari-240.png",
+  },
+
+  {
+    isOpen: true,
+    title: "Facetime",
+    url: "https://help.apple.com/assets/613FAE9AB0A83F19E005E2EC/613FAE9CB0A83F19E005E2F4/en_GB/da344696d20a7c23624795e7c31e1053.png",
+  },
+  {
+    isOpen: false,
+    title: "Messages",
+    url: "https://help.apple.com/assets/615272778CA2021C9431900B/615272778CA2021C94319012/en_US/5c55a7fe0ab609058db1fc2bf1a365ee.png",
+  },
+  {
+    isOpen: false,
+    title: "appStore",
+    url: "https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-how-setup-for-ios-development-11.png",
+  },
+  {
+    isOpen: false,
+    title: "Maps",
+    url: "https://help.apple.com/assets/615272211494760B754BD339/615272221494760B754BD340/en_GB/ebefa50b854ad64af642633738b93d75.png",
+  },
+
+  {
+    isOpen: false,
+    title: "Contacts",
+    url: "https://help.apple.com/assets/61526FF1CFE4A13B2238B879/61526FF2CFE4A13B2238B880/en_US/97d1bbc73dbf602c4bc123c17bb5def0.png",
+  },
+  {
+    isOpen: false,
+    title: "Chrome",
+    url: "https://p1.hiclipart.com/preview/60/378/416/os-x-dock-icons-chrome-square-google-chrome-icon-png-clipart.jpg",
+  },
+  {
+    isOpen: true,
+    title: "Calendar",
+    url: "https://help.apple.com/assets/61526E8E1494760B754BD308/61526E8F1494760B754BD30F/en_GB/941b3852f089696217cabe420c7a459f.png",
+  },
+  {
+    isOpen: false,
+    title: "Terminal",
+    url: "https://help.apple.com/assets/6152754A4192845C4361C49A/6152754B4192845C4361C4A1/en_GB/d94aa1c4979b25e9ffbda97fcbae219a.png",
+  },
+  {
+    isOpen: false,
+    title: "Reminders",
+    url: "https://p1.hiclipart.com/preview/740/290/368/itunes-13-el-capitan-itunes-icon.jpg",
+  },
+  {
+    isOpen: false,
+    title: "Notes",
+    url: "https://help.apple.com/assets/61527314E4621F1E6B182A5D/61527315E4621F1E6B182A64/en_US/c34b1b0e87e731a83161d9bb21345afc.png",
+  },
+  {
+    isOpen: false,
+    title: "VsCode",
+    url: "data:image/webp;base64,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",
+  },
+  {
+    isOpen: false,
+    title: "Trash",
+    url: "https://cdn.imgbin.com/6/14/17/imgbin-trash-computer-icons-os-x-yosemite-trash-can-white-bucket-illustration-NuQiFteEkhTR9ns4AaNWdBe5d.jpg",
+  },
+];
