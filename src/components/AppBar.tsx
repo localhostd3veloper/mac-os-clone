@@ -2,7 +2,7 @@ import { appList } from "../data/appList";
 
 function AppBar() {
   return (
-    <div className="transition-all backdrop-blur-sm mb-1 flex gap-2 bg-white/20 h-20 rounded-xl">
+    <div className="transition-all backdrop-blur-sm mb-1 px-3 flex gap-2 bg-white/20 h-20 rounded-xl">
       {appList.map((app, index) => (
         <div
           key={index}
