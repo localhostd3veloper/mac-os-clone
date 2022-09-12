@@ -13,7 +13,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="h-screen bg-gray-900">
+      <div className="h-screen bg-gradient-to-l from-pink-500 via-pink-500 to-purple-500">
         <Player
           autoplay
           src="https://assets1.lottiefiles.com/packages/lf20_rbtawnwz.json"
@@ -23,7 +23,10 @@ function App() {
     );
   }
   return (
-    <div className="h-screen bg-[url('https://cdn.vox-cdn.com/uploads/chorus_asset/file/21825429/VRG_Birchler_Catalina.0.jpg')] object-contain bg-cover transition-all duration-500">
+    <div
+      id="app"
+      className="h-screen bg-[url('https://wallpaperaccess.com/full/38598.jpg')] object-contain bg-cover transition-all duration-500"
+    >
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <AppBar />
