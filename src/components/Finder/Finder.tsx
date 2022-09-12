@@ -1,0 +1,37 @@
+import { SetStateAction, Dispatch } from "react";
+import FinderBody from "./FinderBody";
+import FinderHeader from "./FinderHeader";
+import FinderSidebar from "./FinderSidebar";
+function Finder({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}) {
+  return (
+    <>
+      {isOpen && (
+        <div className="h-[450px] w-[50vw] cursor-grab  flex bg-white/40 rounded-xl overflow-hidden backdrop-blur-sm">
+          <div className="w-3/12 flex flex-col gap-4 p-2 cursor-default">
+            <div className="flex gap-1 p-2">
+              <span
+                className="h-3 w-3 rounded-full bg-red-600 cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              ></span>
+              <span className="h-3 w-3 rounded-full bg-yellow-600"></span>
+              <span className="h-3 w-3 rounded-full bg-green-600"></span>
+            </div>
+            <FinderSidebar />
+          </div>
+          <div className="w-9/12 bg-gray-200 flex flex-col">
+            <FinderHeader />
+            <FinderBody />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default Finder;

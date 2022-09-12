@@ -4,7 +4,7 @@ import { useDrag } from "@use-gesture/react";
 import { useState } from "react";
 
 import AppBar from "./components/AppBar";
-import Finder from "./components/Finder";
+import Finder from "./components/Finder/Finder";
 import StatusBar from "./components/StatusBar";
 
 function App() {
