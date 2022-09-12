@@ -9,7 +9,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="h-screen bg-gradient-to-l from-pink-500 via-purple-500 to-purple-500">
+      <div className="h-screen bg-gradient-to-tl from-pink-700 via-purple-500 to-purple-600">
         <Player
           autoplay
           src="https://assets1.lottiefiles.com/packages/lf20_rbtawnwz.json"
