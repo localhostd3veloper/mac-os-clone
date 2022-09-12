@@ -25,7 +25,7 @@ function App() {
     );
   }
   return (
-    <div className="h-screen bg-[url('https://wallpaperaccess.com/full/38598.jpg')] object-contain bg-cover transition-all duration-500">
+    <div className="h-screen bg-[url('https://wallpaperaccess.com/full/5065615.jpg')] bg-cover transition-all duration-500">
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <AppBar />
