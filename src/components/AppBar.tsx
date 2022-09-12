@@ -3,8 +3,9 @@ import { appList } from "../data/appList";
 function AppBar() {
   return (
     <div className="transition-all backdrop-blur-sm mb-1 flex gap-2 bg-white/20 h-20 rounded-xl">
-      {appList.map((app) => (
+      {appList.map((app, index) => (
         <div
+          key={index}
           title={app.title}
           className="flex flex-col items-center justify-center hover:scale-125 duration-300 hover:-translate-y-5"
         >
