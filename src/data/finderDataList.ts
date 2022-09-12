@@ -43,6 +43,7 @@ export const finderDataList = {
       id: 7,
       name: "Pictures",
       icon: AiFillPicture,
+      isOpen: true,
     },
     {
       id: 8,
