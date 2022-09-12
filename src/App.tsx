@@ -23,7 +23,7 @@ function App() {
     );
   }
   return (
-    <div className="h-screen bg-[url('https://wallpaperaccess.com/full/366398.jpg')] object-contain bg-cover transition-all duration-500">
+    <div className="h-screen bg-[url('https://cdn.vox-cdn.com/uploads/chorus_asset/file/21825429/VRG_Birchler_Catalina.0.jpg')] object-contain bg-cover transition-all duration-500">
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <AppBar />
