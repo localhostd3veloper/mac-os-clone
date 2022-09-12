@@ -14,7 +14,7 @@ import Moment from "react-moment";
 function StatusBar() {
   const options = ["Finder", "File", "Edit", "View", "Go", "Window", "Help"];
   return (
-    <div className="h-6 px-2 bg-black/20 backdrop-blur-md w-full overflow-hidden flex gap-2 text-sm justify-between text-white items-center">
+    <div className="grow-0 h-6 px-2 bg-black/20 backdrop-blur-md w-full overflow-hidden flex gap-2 text-sm justify-between text-white items-center">
       <BsApple />
       {options.map((option, index) => {
         return (
