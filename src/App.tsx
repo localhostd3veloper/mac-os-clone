@@ -1,6 +1,5 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useSpring, animated } from "@react-spring/web";
-import { SpringValue } from "@react-spring/web/dist/declarations/src";
 import { useDrag } from "@use-gesture/react";
 import { useState } from "react";
 
@@ -17,7 +16,7 @@ function App() {
     y: 0,
     config: {
       mass: 1,
-      tension: 150,
+      tension: 50,
       friction: 10,
     },
   }));
@@ -50,11 +49,7 @@ function App() {
     <div className="h-screen bg-[url('https://wallpaperaccess.com/full/5065615.jpg')] bg-cover transition-all duration-500">
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
-        <animated.div
-          style={{ x, y }}
-          {...bindDrag()}
-          className="flex justify-center items-center"
-        >
+        <animated.div style={{ x, y }} {...bindDrag()}>
           <Finder isOpen={isOpen} setIsOpen={setIsOpen} />
         </animated.div>
         <AppBar />
