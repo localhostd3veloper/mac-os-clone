@@ -35,7 +35,7 @@ function App() {
           autoplay
           src="https://assets1.lottiefiles.com/packages/lf20_rbtawnwz.json"
           className="h-screen"
-          speed={0.8}
+          speed={1.2}
           onEvent={(event) => {
             if (event === "pause") {
               setIsLoading(false);
@@ -46,7 +46,7 @@ function App() {
     );
   }
   return (
-    <div className="h-screen bg-[url('https://wallpaperaccess.com/full/5065615.jpg')] bg-cover transition-all duration-500">
+    <div className="h-screen bg-wallpaper overflow-hidden bg-cover transition-all duration-500">
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <animated.div style={{ x, y }} {...bindDrag()}>
