@@ -19,7 +19,7 @@ function StatusBar() {
       {options.map((option, index) => {
         return (
           <button
-            className="hover:text-gray-300 duration-200  mx-2"
+            className="hover:text-gray-300 duration-200 Fmx-2"
             key={index}
           >
             {option}
@@ -36,7 +36,11 @@ function StatusBar() {
         <IoIosSearch className="" />
         <IoIosWifi className="" />
         <IoIosSwitch className="" />
-        <div className="mx-1"></div>
+        <img
+          src="https://static.wikia.nocookie.net/logopedia/images/3/3b/Siri1.png/revision/latest?cb=20160616160932"
+          alt="Siri Logo"
+          className="w-4 h-4"
+        />
         <div className="mx-3">
           <Moment format="ddd hh:mm"></Moment>
         </div>
