@@ -1,7 +1,7 @@
 function LockScreen() {
   onkeydown = (e) => {
     if (e.key === "Enter") {
-      window.location.assign("/lockscreen");
+      window.location.assign("/");
     }
   };
   return (
