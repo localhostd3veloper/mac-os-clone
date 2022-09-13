@@ -1,4 +1,4 @@
-import { SetStateAction, Dispatch, useState } from "react";
+import { SetStateAction, Dispatch } from "react";
 import { IAssetImages } from "../../interfaces/IAssetImages";
 import FinderBody from "./FinderBody";
 import FinderHeader from "./FinderHeader";
@@ -7,13 +7,15 @@ function Finder({
   isOpen,
   setIsOpen,
   imageList,
+  setIsFullScreen,
+  isFullScreen,
 }: {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   imageList: Array<IAssetImages>;
+  isFullScreen: boolean;
+  setIsFullScreen: Dispatch<SetStateAction<boolean>>;
 }) {
-  const [isFullScreen, setIsFullScreen] = useState(false);
-
   return (
     <>
       {isOpen && (

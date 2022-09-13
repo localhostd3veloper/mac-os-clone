@@ -1,7 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useSpring, animated } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import AppBar from "./components/AppBar";
 import Finder from "./components/Finder/Finder";
@@ -12,13 +12,14 @@ import { imageList } from "./data/imageList";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(true);
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   const [{ x, y }, api] = useSpring(() => ({
-    x: 0,
-    y: 0,
+    x: 0, // initial x position
+    y: 0, // initial y position
     config: {
       mass: 1,
-      tension: 50,
+      tension: 60,
       friction: 10,
     },
   }));
@@ -29,6 +30,15 @@ function App() {
       y: offset[1],
     });
   });
+
+  useEffect(() => {
+    if (isFullScreen) {
+      api({
+        x: 0,
+        y: 0,
+      });
+    }
+  }, [setIsFullScreen, isFullScreen, api]);
 
   if (isLoading) {
     return (
@@ -52,7 +62,13 @@ function App() {
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <animated.div style={{ x, y }} {...bindDrag()}>
-          <Finder isOpen={isOpen} setIsOpen={setIsOpen} imageList={imageList} />
+          <Finder
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            imageList={imageList}
+            isFullScreen={isFullScreen}
+            setIsFullScreen={setIsFullScreen}
+          />
         </animated.div>
         <AppBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
