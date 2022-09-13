@@ -23,7 +23,9 @@ function Finder({
       {isOpen && (
         <div
           className={`${
-            isFullScreen ? "h-[85vh] w-screen " : "h-[70vh] w-[50vw]"
+            isFullScreen
+              ? "h-[85vh] w-screen "
+              : "h-[70vh] w-[80vw] md:w-[60vw] lg:w-[50vw]"
           }  cursor-grab  flex bg-white/40 rounded-xl overflow-hidden backdrop-blur-sm transition-all duration-300`}
         >
           <div className="w-3/12 flex flex-col gap-4 p-2 cursor-default">
