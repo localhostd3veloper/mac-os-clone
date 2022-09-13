@@ -40,7 +40,7 @@ export const systemDropDownoptions = [
   {
     id: 8,
     name: "Shut Down...",
-    action: () => window.close(),
+    action: () => window.location.assign("/shutdown"),
   },
   {
     id: 9,
