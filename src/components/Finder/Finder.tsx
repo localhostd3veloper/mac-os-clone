@@ -12,7 +12,7 @@ function Finder({
   return (
     <>
       {isOpen && (
-        <div className="h-[450px] w-[50vw] cursor-grab  flex bg-white/40 rounded-xl overflow-hidden backdrop-blur-sm">
+        <div className="h-[500px] w-[50vw] cursor-grab  flex bg-white/40 rounded-xl overflow-hidden backdrop-blur-sm">
           <div className="w-3/12 flex flex-col gap-4 p-2 cursor-default">
             <div className="flex gap-1 p-2">
               <span
