@@ -52,7 +52,7 @@ function App() {
         <animated.div style={{ x, y }} {...bindDrag()}>
           <Finder isOpen={isOpen} setIsOpen={setIsOpen} />
         </animated.div>
-        <AppBar />
+        <AppBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </div>
   );
