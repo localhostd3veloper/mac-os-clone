@@ -10,10 +10,10 @@ function SleepScreen() {
   }, [time]);
 
   onkeydown = () => {
-    window.location.href = "/";
+    window.location.href = "/lockscreen";
   };
   onmousemove = () => {
-    window.location.href = "/";
+    window.location.href = "/lockscreen";
   };
 
   return (
