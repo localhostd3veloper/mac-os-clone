@@ -1,9 +1,15 @@
 import { IAssetImages } from "../../interfaces/IAssetImages";
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 
-function FinderBody({ imageList }: { imageList: Array<IAssetImages> }) {
-  const [selectedAsset, setSelectedAsset] = useState<IAssetImages | null>(null);
-
+function FinderBody({
+  imageList,
+  selectedAsset,
+  setSelectedAsset,
+}: {
+  imageList: Array<IAssetImages>;
+  selectedAsset: IAssetImages | null;
+  setSelectedAsset: Dispatch<SetStateAction<IAssetImages | null>>;
+}) {
   return (
     <>
       {!selectedAsset ? (

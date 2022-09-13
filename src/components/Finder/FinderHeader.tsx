@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import {
   AiOutlineDoubleLeft,
   AiOutlineLeft,
@@ -6,12 +7,19 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import { GrAppsRounded } from "react-icons/gr";
+import { IAssetImages } from "../../interfaces/IAssetImages";
 
-function FinderHeader() {
+function FinderHeader({
+  setSelectedAsset,
+}: {
+  setSelectedAsset: Dispatch<SetStateAction<IAssetImages | null>>;
+}) {
   return (
     <div className="flex items-center justify-between px-3 gap-3 text-lg font-medium min-h-[50px] shadow">
-      <AiOutlineLeft className="text-gray-400" />
-      <AiOutlineRight className="ml-1" />
+      <button onClick={() => setSelectedAsset(null)}>
+        <AiOutlineLeft />
+      </button>
+      <AiOutlineRight />
       <span className="text-gray-500">Pictures - Local</span>
       <GrAppsRounded className="bg-gray-300 rounded ml-5 p-1 h-7 w-7" />
       <span className="text-gray-600">|</span>
