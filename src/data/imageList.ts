@@ -1,4 +1,6 @@
-export const imageList = [
+import { IAssetImages } from "../interfaces/IAssetImages";
+
+export const imageList: Array<IAssetImages> = [
   {
     id: 1,
     name: "Issues Group",
@@ -11,14 +13,15 @@ export const imageList = [
   },
   {
     id: 3,
-    name: "Landscape Shot",
+    name: "Landscape Shot 🌅",
     source: require("../assets/shot.mp4"),
     type: "mp4",
   },
   {
     id: 4,
-    name: "Group Image 📷",
-    source: require("../assets/img1.jpg"),
+    name: "Forests 🌳",
+    source: require("../assets/shot2.mp4"),
+    type: "mp4",
   },
   {
     id: 5,
@@ -27,8 +30,7 @@ export const imageList = [
   },
   {
     id: 6,
-    name: "Atal Tunnel 🚇",
-    source: require("../assets/shot2.mp4"),
-    type: "mp4",
-  }
+    name: "Group Image 📷",
+    source: require("../assets/img1.jpg"),
+  },
 ];
