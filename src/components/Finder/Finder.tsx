@@ -1,13 +1,16 @@
 import { SetStateAction, Dispatch, useState } from "react";
+import { IAssetImages } from "../../interfaces/IAssetImages";
 import FinderBody from "./FinderBody";
 import FinderHeader from "./FinderHeader";
 import FinderSidebar from "./FinderSidebar";
 function Finder({
   isOpen,
   setIsOpen,
+  imageList,
 }: {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  imageList: Array<IAssetImages>;
 }) {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -16,7 +19,7 @@ function Finder({
       {isOpen && (
         <div
           className={`${
-            isFullScreen ? "h-[88vh] w-screen " : "h-[500px] w-[50vw]"
+            isFullScreen ? "h-[85vh] w-screen " : "h-[70vh] w-[50vw]"
           }  cursor-grab  flex bg-white/40 rounded-xl overflow-hidden backdrop-blur-sm transition-all duration-300`}
         >
           <div className="w-3/12 flex flex-col gap-4 p-2 cursor-default">
@@ -35,7 +38,7 @@ function Finder({
           </div>
           <div className="w-9/12 bg-gray-200 flex flex-col">
             <FinderHeader />
-            <FinderBody />
+            <FinderBody imageList={imageList} />
           </div>
         </div>
       )}

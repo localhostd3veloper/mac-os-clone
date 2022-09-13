@@ -7,6 +7,8 @@ import AppBar from "./components/AppBar";
 import Finder from "./components/Finder/Finder";
 import StatusBar from "./components/StatusBar";
 
+import { imageList } from "./data/imageList";
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(true);
@@ -50,7 +52,7 @@ function App() {
       <div className="flex flex-col justify-between items-center h-full">
         <StatusBar />
         <animated.div style={{ x, y }} {...bindDrag()}>
-          <Finder isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Finder isOpen={isOpen} setIsOpen={setIsOpen} imageList={imageList} />
         </animated.div>
         <AppBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

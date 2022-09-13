@@ -1,6 +1,6 @@
-import { imageList } from "../../data/imageList";
+import { IAssetImages } from "../../interfaces/IAssetImages";
 
-function FinderBody() {
+function FinderBody({ imageList }: { imageList: Array<IAssetImages> }) {
   return (
     <div className="grid grid-rows-3 grid-cols-3 gap-4 px-4">
       {imageList.map((data) => (
