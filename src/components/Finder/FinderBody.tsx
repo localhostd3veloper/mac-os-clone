@@ -1,5 +1,5 @@
 import { IAssetImages } from "../../interfaces/IAssetImages";
-import { useState, Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 function FinderBody({
   imageList,
@@ -40,20 +40,22 @@ function FinderBody({
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="text-slate-600"> file : {selectedAsset.name}</div>
+        <div className="flex items-center justify-center h-full overflow-hidden">
           {selectedAsset?.type === "mp4" ? (
             <video
-              className="rounded cursor-pointer drop-shadow-lg"
               src={selectedAsset.source}
+              autoPlay
+              className="mb-10"
               controls
               loop
+              muted
+              controlsList="nodownload"
             />
           ) : (
             <img
               src={selectedAsset.source}
               alt={selectedAsset.name}
-              className="rounded-md object-contain drop-shadow-lg cursor-pointer border border-gray-300"
+              className="rounded-md object-contain bg-cover"
             />
           )}
         </div>

@@ -41,7 +41,10 @@ function Finder({
             <FinderSidebar />
           </div>
           <div className="w-9/12 bg-gray-200 flex flex-col">
-            <FinderHeader setSelectedAsset={setSelectedAsset} />
+            <FinderHeader
+              selectedAsset={selectedAsset}
+              setSelectedAsset={setSelectedAsset}
+            />
             <FinderBody
               selectedAsset={selectedAsset}
               setSelectedAsset={setSelectedAsset}
