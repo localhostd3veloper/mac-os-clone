@@ -21,17 +21,20 @@ function StatusBar() {
     <div className="z-10 h-6 px-2 bg-white/20 backdrop-blur-md w-full  flex gap-2 text-sm justify-between text-white items-center">
       <BsApple
         onClick={() => setisSystemDropdown(!isSystemDropdown)}
-        className="hover:text-gray-700 duration-500 cursor-pointer"
+        className="hover:text-gray-700 duration-500 mx-2 cursor-pointer mb-0.5"
       />
-      {options.map((option, index) => {
-        return (
-          <button className="hover:text-gray-300 duration-200" key={index}>
-            {option}
-          </button>
-        );
-      })}
+      {options.map((option, index) => (
+        <div
+          className={`hover:text-gray-300 mr-2 ${
+            index === 0 && "font-semibold"
+          } text-sm duration-200`}
+          key={index}
+        >
+          {option}
+        </div>
+      ))}
 
-      <div className="ml-auto flex gap-2 items-center">
+      <div className="ml-auto flex gap-4 items-center">
         <MdOutlineWifiTetheringOff />
         <IoMdDesktop />
         <IoIosCalendar />
@@ -40,7 +43,7 @@ function StatusBar() {
         <IoIosSearch />
         <IoIosWifi />
         <IoIosSwitch />
-        <div className="mx-3">
+        <div className="mx-3 text-sm">
           <Moment format="ddd hh:mm"></Moment>
         </div>
       </div>
