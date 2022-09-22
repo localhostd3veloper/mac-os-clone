@@ -4,6 +4,7 @@ import MacOSApp from "./views/MacOSApp";
 import ShutDown from "./views/ShutDown";
 import SleepScreen from "./views/SleepScreen";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,5 +17,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;
